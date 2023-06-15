@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Sign Up Form</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo-section">
+      <div class="banner">
+        <img src="/logo.svg" alt="logo">
+      </div>
+      <p class="attribution">
+        Photo by <a
+          href="https://unsplash.com/pt-br/@spaceboy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Henrik
+          Dønnestad</a>
+      </p>
+    </div>
+    <div class="form-section">
+      <p>Introducing revolutionary surfboard Hurricane technology! <br>Experience the future of surfing with our cutting-edge
+        surfboards equipped with advanced features and performance-enhancing capabilities.
+      </p>
+      <p>Explore new levels of speed, agility, and control as you ride the waves like never before. Join Hurricane today and be
+        part of the surfing revolution.</p>
+      <form onsubmit="return validateForm()">
+        <div class="inputs-section">
+          <div>
+            <h3>Let's do this!</h3>
+          </div>
+          <p class="required-message">Fields marked with <span class="asterisk">*</span> are required.</p>
+          <div class="inputs">
+            <div>
+              <label class="required" for="fname">First Name</label>
+              <input type="text" name="fname" id="fname" required>
+            </div>
+            <div>
+              <label class="required" for="lname">Last Name</label>
+              <input type="text" name="lname" id="lname" required>
+            </div>
+            <div>
+              <label class="required" for="email">Email</label>
+              <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+              <label for="phone">Phone Number</label>
+              <input type="tel" name="phone" id="phone">
+            </div>
+            <div>
+              <label class="required" for="password">Password</label>
+              <input type="password" name="password" id="password" required>
+            </div>
+            <div>
+              <label class="required" for="confirm-password">Confirm Password</label>
+              <input type="password" name="confirm-password" id="confirm-password" required>
+            </div>
+          </div>
+        </div>
+        <input id="create-account" type="submit" value="Create Account">
+        <p class="prompt">Already have an account? <a href="/index.html">Log in</a></p>
+      </form>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+
+</html>

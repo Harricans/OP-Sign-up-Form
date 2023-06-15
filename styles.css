@@ -1,0 +1,181 @@
+:root {
+  --text: #f0fcfe;
+  --background: #01080a;
+  --primary-button: #062d79;
+  --secondary-button: #050118;
+  --accent: #190679;
+  --error-color: red;
+  --base-font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+  font-size: 1rem;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+}
+
+a {
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-button);
+}
+
+.logo-section {
+  background-position: center center;
+  background-image: url(/henrik-donnestad-Lkpax1rj1No-unsplash.jpg);
+  background-size: cover;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  color: var(--text);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20vh;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.banner img {
+  height: 40vh;
+  max-width: 100%;
+}
+
+.attribution {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.form-section {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--background);
+  color: var(--text);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form-section > p {
+  font-size: 1.3rem;
+  margin-left: 3rem;
+  max-width: 70%;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.inputs-section {
+  background-color: var(--primary-button);
+  margin-top: 2rem;
+  padding: 1.5rem 3rem;
+  box-shadow: 0 5px 5px 4px rgba(6, 45, 121, 0.7);
+}
+
+.inputs-section label {
+  position: relative;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1px;
+  color: var(--text);
+  font-family: monospace;
+}
+
+.inputs-section label.required::after {
+  content: "*";
+  color: var(--error-color);
+  margin-left: 0.25rem;
+}
+
+.required-message {
+  font-size: 0.8rem;
+  color: var(--text);
+}
+
+.asterisk {
+  color: var(--error-color);
+}
+
+.inputs-section input {
+  box-sizing: border-box;
+  border: 1px solid var(--text);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: black;
+  background-color: white;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.125rem;
+}
+
+input:focus {
+  border: 2px solid var(--accent);
+  box-shadow: 0.125rem 0.0625rem 0.125rem 0.125rem rgba(25, 6, 121, 0.1);
+}
+
+input.error {
+  border: 1px solid var(--error-color);
+}
+
+#create-account {
+  font-size: 1.2rem;
+  margin-left: 3rem;
+  margin-top: 2rem;
+  background-color: var(--accent);
+  color: var(--text);
+  border: none;
+  padding: 0.75rem 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.125rem 0.3125rem 0.3125rem 0.25rem rgba(25, 6, 121, 0.7);
+}
+
+#create-account:hover{
+  background-color: #062d79;
+  transform: scale(1.05);
+  transition-duration: .2s;
+}
+
+#create-account:active{
+  background-color: white;
+  color: black;
+  transform: translateY(4px);
+}
+.prompt {
+  margin-left: 3rem;
+}
+
+.inputs-section input.error {
+  border: 1px solid var(--error-color);
+  background-color: #ffcccc;
+}
+
+.error-message {
+  margin-top: 0;
+  font-size: 0.8rem;
+  color: var(--error-color);
+}
